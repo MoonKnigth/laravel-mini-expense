@@ -22,7 +22,7 @@ WORKDIR /var/www
 COPY . .
 
 # ติดตั้ง Dependencies ของ Laravel
-RUN composer install --no-interaction --optimize-autoloader --no-dev
+RUN composer install --no-interaction --optimize-autoloader --no-dev --no-scripts
 
 # ตั้งค่าสิทธิ์ไฟล์
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
